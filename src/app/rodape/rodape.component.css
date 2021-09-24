@@ -1,0 +1,38 @@
+ul.social-network{
+    list-style: nome;
+    padding: 0;
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.fa{
+    font-size: 35px;
+    color: white;
+    padding: 10px;
+}
+
+.fa-facebook-official:hover{
+    color: pink;
+}
+
+.fa-instagram:hover{
+    color: pink;
+}
+
+.fa-linkedin:hover{
+    color: pink;
+}
+
+.fa-github:hover{
+    color: pink;
+}
+
+.fa-copyright{
+    font-size: 15px;
+    margin: 0;
+    padding: 5px;
+}

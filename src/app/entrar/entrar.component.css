@@ -1,0 +1,7 @@
+#img-bg{
+    background-image: url('https://cdn2.stormgrounds.com/stormgrounds-cdn/media/Stormtrooper-under-Keyboard.jpg');
+    min-height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
