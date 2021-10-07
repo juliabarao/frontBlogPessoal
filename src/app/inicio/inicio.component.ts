@@ -40,6 +40,7 @@ export class InicioComponent implements OnInit {
     }
 
     this.authService.refreshToken()
+
     this.getAllTemas()
     this.getAllPostagens()
   }
@@ -62,7 +63,7 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  findUsuarioById(){
+  findByIdUsuario(){
     this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario) =>{
       this.usuario = resp
     })
@@ -82,5 +83,4 @@ export class InicioComponent implements OnInit {
       this.getAllPostagens()
     })
   }
-
 }
