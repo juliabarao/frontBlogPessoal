@@ -9,6 +9,9 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
   providedIn: 'root'
 })
 export class AuthService {
+  getUsuarioById(id: number) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(
     private http: HttpClient
@@ -34,13 +37,27 @@ export class AuthService {
   }
 
   getByIdUsuario(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`https://loucurasdajuba.herokuapp.com/usuarios/${id}`)
+    return this.http.get<Usuario>(`https://loucurasdajuba.herokuapp.com/usuarios/${id}`, this.token)
+  }
+
+  putUsuario(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>('https://loucurasdajuba.herokuapp.com/usuarios/atualizar', usuario, this.token);
   }
 
   logado() {
     let ok: boolean = false
 
     if(environment.token != '') {
+      ok = true
+    }
+
+    return ok
+  }
+
+  adm(){
+    let ok: boolean = false
+
+    if(environment.tipo == 'adm') {
       ok = true
     }
 

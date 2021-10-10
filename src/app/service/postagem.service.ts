@@ -21,7 +21,23 @@ export class PostagemService {
     return this.http.get<Postagens[]>('https://loucurasdajuba.herokuapp.com/postagens', this.token)
   }
 
+  getByIdPostagem(id: number): Observable<Postagens>{
+    return this.http.get<Postagens>(`https://loucurasdajuba.herokuapp.com/postagens/${id}`, this.token)
+  }
+
+  getByTituloPostagem(titulo: string): Observable<Postagens[]>{
+    return this.http.get<Postagens[]>(`https://loucurasdajuba.herokuapp.com/postagens/titulo/${titulo}`, this.token)
+  }
+
   postPostagem(postagens: Postagens): Observable<Postagens>{
     return this.http.post<Postagens>('https://loucurasdajuba.herokuapp.com/postagens', postagens, this.token)
+  }
+
+  putPostagem(postagens: Postagens): Observable<Postagens>{
+    return this.http.post<Postagens>('https://loucurasdajuba.herokuapp.com/postagens', postagens, this.token)
+  }
+
+  deletePostagem(id: number){
+    return this.http.delete(`https://loucurasdajuba.herokuapp.com/postagens/${id}`, this.token)
   }
 }
