@@ -41,5 +41,8 @@ ul.social-network li{
 }
 
 #cor{
-    background-color: rgb(167, 167, 167);
+    background-color: black;
+}
+.bgdark{
+    background-color: black;
 }

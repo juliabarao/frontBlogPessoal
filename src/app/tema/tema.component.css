@@ -1,5 +1,5 @@
 #fundo{
-    background-color: rgb(167, 167, 167);
+    background: linear-gradient(white, grey, black)
 }
 
 .fs-54{

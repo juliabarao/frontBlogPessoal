@@ -7,5 +7,12 @@
 }
 
 #cor{
-    background-color: pink;
+    background-color: white;
+}
+
+.text-cor{
+    color: black;
+}
+.container-fluid{
+    background: linear-gradient(white, grey, black)
 }
